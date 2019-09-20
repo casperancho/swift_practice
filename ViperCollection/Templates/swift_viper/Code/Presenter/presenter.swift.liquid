@@ -1,0 +1,23 @@
+//
+//  {{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+class {{ module_info.name }}Presenter: {{ module_info.name }}PresenterAssemblyProtocol {
+
+    weak var viewController: {{ module_info.name }}PresenterToViewProtocol?
+    var interactor: {{ module_info.name }}PresenterToInteractorProtocol?
+    var router: {{ module_info.name }}PresenterToRouterProtocol?
+
+}
+
+extension {{ module_info.name }}Presenter: {{ module_info.name }}ViewToPresenterProtocol {
+
+}
+
+extension {{ module_info.name }}Presenter: {{ module_info.name }}InteractorToPresenterProtocol {
+
+}

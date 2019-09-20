@@ -1,0 +1,48 @@
+//
+//  {{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+protocol {{ module_info.name }}ViewToPresenterProtocol: AnyObject {
+    // MARK: define protocol
+
+}
+
+protocol {{ module_info.name }}PresenterToViewProtocol: AnyObject {
+    // MARK: define protocol
+
+}
+
+protocol {{ module_info.name }}PresenterToRouterProtocol: AnyObject {
+    // MARK: define protocol
+
+}
+
+protocol {{ module_info.name }}PresenterToInteractorProtocol: AnyObject {
+    // MARK: define protocol
+
+}
+
+protocol {{ module_info.name }}InteractorToPresenterProtocol: AnyObject {
+    // MARK: define protocol
+
+}
+
+// MARK: {{ module_info.name }} Assembly protocols
+
+protocol {{ module_info.name }}ViewAssemblyProtocol: AnyObject {
+    var presenter: {{ module_info.name }}ViewToPresenterProtocol? {get set}
+}
+
+protocol {{ module_info.name }}PresenterAssemblyProtocol: AnyObject {
+    var viewController: {{ module_info.name }}PresenterToViewProtocol? {get set}
+    var interactor: {{ module_info.name }}PresenterToInteractorProtocol? {get set}
+    var router: {{ module_info.name }}PresenterToRouterProtocol? {get set}
+}
+
+protocol {{ module_info.name }}InteractorAssemblyProtocol: AnyObject {
+    var presenter: {{ module_info.name }}InteractorToPresenterProtocol? {get set}
+}

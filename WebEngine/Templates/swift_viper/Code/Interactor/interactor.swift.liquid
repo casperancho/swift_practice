@@ -1,0 +1,16 @@
+//
+//  {{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+class {{ module_info.name }}Interactor: {{ module_info.name }}InteractorAssemblyProtocol {
+    weak var presenter: {{ module_info.name }}InteractorToPresenterProtocol?
+
+}
+
+extension {{ module_info.name }}Interactor: {{ module_info.name }}PresenterToInteractorProtocol {
+
+}

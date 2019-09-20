@@ -1,0 +1,35 @@
+//
+//  {{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import UIKit
+
+class {{ module_info.name }}Router {
+
+    static func createModule() -> UIViewController {
+
+        let viewController = {{ module_info.name }}ViewController()
+
+        let presenter = {{ module_info.name }}Presenter()
+        let interactor = {{ module_info.name }}Interactor()
+        let router = {{ module_info.name }}Router()
+
+        viewController.presenter = presenter
+        presenter.viewController = viewController
+        presenter.router = router
+        presenter.interactor = interactor
+        interactor.presenter = presenter
+
+        return viewController
+
+    }
+
+}
+
+extension {{ module_info.name }}Router: {{ module_info.name }}PresenterToRouterProtocol {
+
+}
